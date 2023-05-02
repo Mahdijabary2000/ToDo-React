@@ -32,13 +32,13 @@ function TodoForm(props) {
   return (
     
 
-    <div>
+    <div className='w-full flex '>
       <form onSubmit={submitHndeler}>
         {props.edit ?
           <>
               <input 
                onChange={changHandeler}
-                className="border-4 border-red-600 "
+                className="border-1 border-r-sky-500"
                  type="text" value={input} 
                    placeholder='update Todo...' 
                    ref={inputRef}
