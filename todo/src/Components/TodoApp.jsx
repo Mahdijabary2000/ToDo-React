@@ -48,7 +48,7 @@ function TodoApp() {
   }
 //
   return (
-    <div className="flex flex-col  items-center">
+    <div className="flex flex-col h-screen  items-center ">
       <div className='flex justify-center items-center flex-col my-8'>
         <p className='text-sky-400 text-4xl '>To-do List</p>
         <p className='text-pink-400 text-lg font-mono'>Simple App to manage your daily to-dos</p>
