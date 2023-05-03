@@ -14,7 +14,7 @@ function TodoList({todos,onComplete,onDelete,onUpdate}) {
     //
 
     const renderTodo=()=>{
-      if(todos.length===0)return<p>add some todos</p>;
+      if(todos.length===0)return<p className='flex justify-center'>add some todos</p>;
   return (
     <>
       {
@@ -28,6 +28,7 @@ function TodoList({todos,onComplete,onDelete,onUpdate}) {
           //
           onEdit={()=>setEdite(todo)}
           //
+          
           />
         );
       })

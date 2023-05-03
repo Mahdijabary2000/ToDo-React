@@ -1,4 +1,5 @@
 import React,{useRef, useState,useEffect} from 'react'
+import { FaPlus } from "react-icons/fa";
 
 function TodoForm(props) {
 
@@ -32,13 +33,13 @@ function TodoForm(props) {
   return (
     
 
-    <div className='w-full flex '>
+    <div className='w-full flex justify-center'>
       <form onSubmit={submitHndeler}>
         {props.edit ?
           <>
               <input 
+              className='border-4 '
                onChange={changHandeler}
-                className="border-1 border-r-sky-500"
                  type="text" value={input} 
                    placeholder='update Todo...' 
                    ref={inputRef}
@@ -51,13 +52,13 @@ function TodoForm(props) {
           <>
             <input
               onChange={changHandeler}
-              className="border-4 border-red-600 " 
+              className='border-2  rounded-md py-2 px-4 outline-2 outline-sky-600'
               type="text" 
               value={input}
                placeholder='add Todo...' 
                ref={inputRef}
                />
-            <button  type='submit'>add</button>
+            <button className='border-2 bg-pink-300 py-4 px-2 rounded-lg' type='submit'><FaPlus/></button>
           </>
       }
 
