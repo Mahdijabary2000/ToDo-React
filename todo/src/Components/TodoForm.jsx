@@ -1,5 +1,6 @@
 import React,{useRef, useState,useEffect} from 'react'
 import { FaPlus } from "react-icons/fa";
+import { BsCheckLg } from "react-icons/bs";
 
 function TodoForm(props) {
 
@@ -38,13 +39,13 @@ function TodoForm(props) {
         {props.edit ?
           <>
               <input 
-              className='border-4 '
+              className='border-2  rounded-md py-2 px-4 outline-2 outline-sky-600 '
                onChange={changHandeler}
                  type="text" value={input} 
                    placeholder='update Todo...' 
                    ref={inputRef}
                    />
-              <button  type='submit'>update</button>
+              <button className=' bg-pink-300  px-2  py-4 rounded-lg hover:bg-gray-400 ml-1' type='submit'><BsCheckLg /></button>
           </>
           
           :
@@ -52,13 +53,13 @@ function TodoForm(props) {
           <>
             <input
               onChange={changHandeler}
-              className='border-2  rounded-md py-2 px-4 outline-2 outline-sky-600'
+              className='border-2  rounded-md py-2 px-4 outline-2 outline-sky-600 mb-2'
               type="text" 
               value={input}
                placeholder='add Todo...' 
                ref={inputRef}
                />
-            <button className='border-2 bg-pink-300 py-4 px-2 rounded-lg' type='submit'><FaPlus/></button>
+            <button className=' bg-pink-300 py-4 px-2 rounded-lg hover:bg-gray-400 ml-1' type='submit'><FaPlus/></button>
           </>
       }
 

@@ -48,12 +48,12 @@ function TodoApp() {
   }
 //
   return (
-    <div>
-      <div className='flex justify-center items-center flex-col mb-4'>
-        <p className='text-sky-400 text-4xl'>To-do List</p>
-        <p className='text-pink-400 text-lg'>Simple App to manage your daily to-dos</p>
+    <div className="flex flex-col  items-center">
+      <div className='flex justify-center items-center flex-col my-8'>
+        <p className='text-sky-400 text-4xl '>To-do List</p>
+        <p className='text-pink-400 text-lg font-mono'>Simple App to manage your daily to-dos</p>
       </div>
-      <div className=' bg-cyan-100 w-[500px] h-[200px] flex flex-col items-center '>
+      <div className=' bg-cyan-100  w-[350px] md:w-[500px] flex flex-col items-center p-8 shadow-md shadow-gray-300 rounded-lg'>
         <TodoForm addTodoHandeler={addTodoHandeler}/>
         <TodoList 
         todos={todos}
